@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Út Ráng Top White</title>
+    <link rel="stylesheet" href="product.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "fByYa41ggoDAiqdmw",
+            });
+        })();
+    </script>
+
+</head>
+
+<body>
+
+
+
+
+
+    <header>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <h2>Út Ráng Top White</h2>
+
+        <div class="topnav" id="myTopnav">
+
+            <a href="index.html" class="active">Trang chủ</a>
+            <a href="contact.html">Liên hệ</a>
+            <a href="about.html">Thông tin</a>
+            <a id="login-button" style="display: none;">Login with Google</a>
+            <a id="logout-button" style="display: none;">Logout</a>
+            <a href="cart.html" id="cart-icon" class="active">
+                Giỏ hàng
+                <span id="cart-count">0</span>
+            </a>
+
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <!-- <div class="search-cart-wrapper"> -->
+            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+
+            <!-- </div> -->
+
+
+        </div>
+    </header>
+
+    <main>
+        <div id="product-description" class="product-container">
+            <!-- Product details will be displayed here -->
+        </div>
+        <br/>
+        <div id="description" class="description">
+            <!-- Product details will be displayed here -->
+        </div>
+        <div id="myModal" class="modal">
+            
+            <div id="order-form" class="product-container1" style="display: none;">
+                <span class="close">&times;</span>
+                <h3 style="color: chocolate;">Thông tin mua hàng</h3>
+                <h4>Sản phẩm:</h4>
+                <div id="order-sp"></div>
+                <div id="order-price"></div>
+                <h4>Số lượng:</h4>
+                <div class="number-input">
+                    <button type="button" id="decrement">-</button>
+                    <input type="number" id="number" value="0" min="0" class="inMessage" />
+                    <button type="button" id="increment">+</button>
+                </div>
+
+                <input type="text" id="customer-sdt" placeholder="Nhập số điện thoại">
+                <textarea type="text" id="customer-name" placeholder="Thông tin thêm"></textarea>
+                <input type="email" id="customer-email" placeholder="Your Email" class="hidden">
+                <div id="user-user"></div>
+                <button id="confirm-order">Xác nhận mua hàng</button>
+            </div>
+        </div>
+
+        <div class="comment">
+            <h3>Đánh giá sản phẩm</h3>
+            <div id="comments"></div>
+        </div>
+
+        <div id="comment-section" class="comment-container">
+            <h3>Để lại đánh giá về sản phẩm này</h3>
+            <textarea id="comment-input" placeholder="Thêm đánh giá"></textarea>
+
+            <div class="rating-wrapper">
+                <!-- Error  label for="rating-input"-->
+
+                <div id="rating-container">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <input type="hidden" id="rating-input" value="0">
+            </div>
+            <button id="submit-comment" class="comm1">Đánh giá</button>
+            <br />
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Út Ráng Top White. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="product.js" defer></script>
+</body>
+
+</html>

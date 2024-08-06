@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "emailjs": "^4.0.3",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
+  }
+}

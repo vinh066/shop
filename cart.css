@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #b66c9d;
+    color: white;
+    padding: 8px 2%;
+    text-align: center;
+}
+main {
+    padding: 2%;
+    text-align: center;
+}
+footer {
+    background-color: #b66c9d;
+    color: white;
+    text-align: center;
+    padding: 10px 2%;
+}
+
+
+
+h3 {
+    color: chocolate;
+}
+p {
+    color: red;
+}
+
+
+/* Menu */
+
+.topnav {
+    overflow: hidden;
+    background-color: #b66c9d;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #b66c9d;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+
+#search-input {
+    width: auto;
+    height: 16px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    /* Khoảng cách giữa input và icon giỏ hàng */
+}
+
+
+#cart-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    max-width:  100px;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* Menu */
+
+
+/* Responsive */
+  /* Menu */
+  @media screen and (max-width: 500px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  /* Menu */
+  /* Responsive */
