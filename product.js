@@ -2,12 +2,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/fireba
 import { getFirestore, collection, addDoc, query, where, getDocs } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 
-
-
-
-
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyCaEHKwE2QRsSJty6oRfXmM18j-nRwLPjU",
     authDomain: "shop-fcdee.firebaseapp.com",
@@ -330,13 +324,14 @@ async function confirmOrder() {
 
     const index = getProductIndexFromURL();
     addToCart(index);
+    const product = products[index];
     const emaily = document.getElementById('customer-email').value;
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     if (emaily !== '') {
 
         var params = {
-            ordersp: document.getElementById('order-sp').value,
-            orderprice: document.getElementById('order-price').value,
+            ordersp: product.name,
+            orderprice: product.price,
             quantity: document.getElementById('number').value,
             phone: document.getElementById('customer-sdt').value,
             name: document.getElementById('user-user').value, // Tên khách hàng
